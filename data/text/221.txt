@@ -1,1 +1,6 @@
-Custom item description
+A handy light that illuminates dark\ncaves. An alternative to a Pokémon\nwith Flash.
+A sturdy hammer that smashes cracked\nrocks. An alternative to a Pokémon\nwith Rock Smash.
+A small, sharp axe that chops down\nthin trees. An alternative to a Pokémon\nwith Cut.
+Reinforced work gloves for shoving\nboulders. An alternative to a Pokémon\nwith Strength.
+A rideable raft that can be inflated\nto cross water. An alternative to a\nPokémon with Surf.
+Call the Pokémon Transport to fly you\nto any town you have visited. An\nalternative to a Pokémon with Fly.

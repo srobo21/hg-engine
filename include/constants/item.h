@@ -2694,7 +2694,15 @@
 // define your custom move effects below like this
 // #define ITEM_CUSTOM_1 (MAX_BASE_ITEM_NUM + 1)
 
-#define MAX_TOTAL_ITEM_NUM ITEM_CANARI_BREAD
+// Field-move key items (HM replacements)
+#define ITEM_FLASHLIGHT (MAX_BASE_ITEM_NUM + 1) // replaces Flash; given by Elder Li in Sprout Tower
+#define ITEM_SLEDGEHAMMER (MAX_BASE_ITEM_NUM + 2) // replaces Rock Smash; given by the Rock Smash guy on Route 36
+#define ITEM_HATCHET (MAX_BASE_ITEM_NUM + 3) // replaces Cut; given by the charcoal kiln master in Ilex Forest
+#define ITEM_POWER_GLOVES (MAX_BASE_ITEM_NUM + 4) // replaces Strength; given by the Hiker on Route 42
+#define ITEM_INFLATABLE_RAFT (MAX_BASE_ITEM_NUM + 5) // replaces Surf; given by the gentleman in the Ecruteak Dance Theater
+#define ITEM_TRANSPORT_SIGNAL (MAX_BASE_ITEM_NUM + 6) // replaces Fly (calls the Pokémon Transport); given by Chuck's wife in Cianwood City
+
+#define MAX_TOTAL_ITEM_NUM ITEM_TRANSPORT_SIGNAL
 
 #define NUM_MEGA_STONES   (48) // includes the pixie plate, doesn't include plza megas due to overflowing bag
 #define NUM_HMS           (ITEM_HM08 - ITEM_HM01 + 1) // intentionally do not include HM07_ORAS (Dive)

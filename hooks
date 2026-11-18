@@ -664,3 +664,9 @@ arm9 EncounterSlot_WildMonSlotRoll_Headbutt 022477C0 0
 0012 PlayerTrainerVictoryBGM_hook 0224DA9E 3
 
 arm9 FieldSystem_RestoreMapObjectsFromSave 0203B9F4 1
+
+arm9 Slots_LaunchApp 0203FA38 2
+
+# Inflatable Raft (src/item.c): surf without a Pokémon when the surf script command gets party slot 0xFF
+0001 CallFieldTask_Surf_Hook 021F2068 3
+arm9 GetIdxOfFirstPartyMonWithMove_Hook 020542E8 2

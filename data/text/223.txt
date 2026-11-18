@@ -1,1 +1,6 @@
-a {COLOR 255}Custom Item{COLOR 0}
+a {COLOR 255}Flashlight{COLOR 0}
+a {COLOR 255}Sledgehammer{COLOR 0}
+a {COLOR 255}Hatchet{COLOR 0}
+a pair of {COLOR 255}Power Gloves{COLOR 0}
+an {COLOR 255}Inflatable Raft{COLOR 0}
+a {COLOR 255}Transport Signal{COLOR 0}

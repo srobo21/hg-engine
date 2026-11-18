@@ -411,6 +411,12 @@ u16 GetMonEvolutionInternal(struct Party *party, struct PartyPokemon *pokemon, u
     if (target) {
         u32 form = (evoTable[i].target & 0xF800) >> 11;
 
+        // Vivillon: wing pattern chosen from the Pokémon's personality value
+        if (target == SPECIES_VIVILLON && form == 0) {
+            u32 pid = GetMonData(pokemon, MON_DATA_PERSONALITY, NULL);
+            form = pid % 20;
+        }
+
         if (form) {
             gEvolutionSceneOverride[0][0] = GetMonData(pokemon, MON_DATA_SPECIES, NULL);
             gEvolutionSceneOverride[0][1] = GetMonData(pokemon, MON_DATA_FORM, NULL);

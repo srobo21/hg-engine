@@ -119,3 +119,8 @@ NOT TELLING
 The repellent’s effect wore off!\nWould you like to use another one?
 You used the {STRVAR_1 8, 1, 0}.
 Begin auto-battle.
+{STRVAR_1 3, 0, 0} switched on\nthe Flashlight!
+Nothing happened...
+{STRVAR_1 3, 0, 0} inflated the raft!\r
+The raft can’t be used on the water\nwithout the Fog Badge.
+The raft can’t be used while someone\nis with you.

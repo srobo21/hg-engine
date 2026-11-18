@@ -99,6 +99,9 @@ scrdef scr_seq_0003_070
 scrdef scr_seq_0003_071
 scrdef scr_seq_0003_072_repels
 scrdef scr_seq_0003_073_autobattle_testing
+scrdef scr_seq_0003_074_flashlight // 2074, Flashlight in a dark map (src/item.c)
+scrdef scr_seq_0003_075_flashlight_alph // 2075, Flashlight at the Ruins of Alph Flash spot (src/item.c)
+scrdef scr_seq_0003_076_inflatable_raft // 2076, Inflatable Raft from the Bag or Y (src/item.c)
 scrdef_end
 
 scr_seq_0003_002:
@@ -1751,5 +1754,86 @@ scr_seq_0003_073_autobattle_testing:
     trainer_battle 5, 0, 0, 0
     //setvar 0x800B, 1
     //WildBattleSp 785 | (1 << 11), 50, 0
+    releaseall
+    end
+
+// Flashlight key item (replaces the Flash field move). Mirrors std_menu_flash minus the Pokémon cut-in.
+scr_seq_0003_074_flashlight:
+    scrcmd_609
+    lockall
+    buffer_players_name 0
+    npc_msg 121
+    closemsg
+    flash_action 1
+    flash_effect
+    wait 42, VAR_SPECIAL_RESULT
+    releaseall
+    end
+
+// Flashlight at the Ruins of Alph southeast chamber Flash spot.
+// Mirrors scr_seq_D24R0204_002 (the vanilla Flash reaction) minus the Pokémon cut-in.
+scr_seq_0003_075_flashlight_alph:
+    scrcmd_609
+    lockall
+    buffer_players_name 0
+    npc_msg 121
+    closemsg
+    wait 2, VAR_SPECIAL_x8004
+    goto_if_set FLAG_OPENED_ALPH_FLASH_SECRET_ROOM, scr_seq_0003_075_already_open
+    screen_shake 0, 2, 10, 6
+    wait 10, VAR_SPECIAL_x8004
+    apply_movement obj_player, _flashlight_alph_exclaim
+    wait_movement
+    hide_person 0 // obj_D24R0204_babyboy1_12, the wall blocking the hidden room
+    setflag FLAG_OPENED_ALPH_FLASH_SECRET_ROOM
+    play_se SEQ_SE_DP_UG_008
+    releaseall
+    end
+
+scr_seq_0003_075_already_open:
+    wait 20, VAR_SPECIAL_x8004
+    npc_msg 122
+    wait_button
+    closemsg
+    releaseall
+    end
+
+.balign 4
+_flashlight_alph_exclaim:
+    step MOVEMENT_EMOTE_EXCLAMATION, 1
+    step_end
+
+// Inflatable Raft (replaces the Surf field move), used from the Bag or Y while facing surfable water.
+// Needs the Fog Badge, like vanilla Surf. Party slot 0xFF tells CallFieldTask_Surf_Hook (src/item.c) there's no Pokémon.
+scr_seq_0003_076_inflatable_raft:
+    scrcmd_609
+    lockall
+    check_escort_mode VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq scr_seq_0003_076_escort
+    check_badge BADGE_FOG, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq scr_seq_0003_076_no_badge
+    buffer_players_name 0
+    npc_msg 123
+    closemsg
+    setvar VAR_SPECIAL_x8004, 255
+    release obj_player
+    surf VAR_SPECIAL_x8004
+    lock obj_player
+    releaseall
+    end
+
+scr_seq_0003_076_no_badge:
+    npc_msg 124
+    wait_button
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_076_escort:
+    npc_msg 125
+    wait_button
+    closemsg
     releaseall
     end

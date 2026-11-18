@@ -1,0 +1,56 @@
+Welcome to the Game Corner!\r
+We trade money for Coins here.\rOh? You don’t have a Coin Case.\nYou’ll need one to hold Coins.
+We trade money for Coins here.\nHow many Coins would you like?
+Thank you!\nHere are your Coins.
+I’m sorry, but you don’t have\nenough money.
+Oh! Your Coin Case is full.
+No Coins today?\nPlease come again!
+Welcome!\rWe exchange your game Coins\nfor fabulous prizes!
+Please come again!
+Sorry! You need more Coins.
+{STRVAR_1 8, 0, 0}.\nIs that right? {YESNO 0}
+Here you go!\r
+Sorry, you can’t carry any more.
+Your party’s full!\nPlease make some room before you\fcome back.
+Would you like {STRVAR_1 0, 1, 0}? {YESNO 0}
+{STRVAR_1 3, 0, 0} received\nthe {STRVAR_1 0, 1, 0}!
+Welcome!\rWe exchange your game Coins\nfor fabulous Pokémon!
+You put away the {STRVAR_1 8, 0, 0}\nin the {STRVAR_1 18, 1, 0} Pocket.
+These new machines are trickier\nthan the old ones in Celadon.\rStill, I’m here every day...\nexcept Sunday mornings, of course.
+I used to spend my days fishing.\rThen I found the slots.\nMy rod’s been gathering dust ever\fsince!
+The reels are spinning!
+I’m one 7 away from a jackpot!\nI can feel it!\rCome on... Come on...\nAww! Not again!
+I hear Dratini is the prize to aim\nfor here.\rIt costs so many Coins, though...
+I lost on purpose today.\rIt’s good manners to let the\nmachines win once in a while.
+I’m saving up Coins to trade for\na Pokémon.\rJust a few thousand more to go!
+You don’t have a Coin Case.
+You don’t have enough Coins.
+Kid! You look new here.\nWant some slot tips? {YESNO 0}
+Want another tip? {YESNO 0}
+Fine. Learn the hard way, then!
+That’s all I’ve got.\nGo give those reels a spin!
+Touch BET on the bottom screen to\nput in three Coins.\rThat’s all it takes to play every\nline on the machine!
+Then touch the screen or press Up\nto spin the reels.\rEach touch or press of A stops\nthe next reel, from left to right!
+Three 7s start a 15-round bonus.\nThree Poké Balls start 8 rounds.\rIn a bonus, every spin only costs\none Coin!
+Some machines are luckier than\nothers, and it changes every day.\rA machine that’s cold today could\nbe hot tomorrow!
+Keep an eye on the Smeargle on\nthe top screen.\rThey say its mood tells you when\na big win is coming!
+Cancel
+TMs
+Held Items
+Substitute\n2,000 Coins
+Swords Dance\n4,000 Coins
+Rest\n6,000 Coins
+Flamethrower\n10,000 Coins
+Ice Beam\n10,000 Coins
+Thunderbolt\n10,000 Coins
+Silk Scarf\n1,000 Coins
+Wide Lens\n1,000 Coins
+Zoom Lens\n1,000 Coins
+Metronome\n1,000 Coins
+Abra{CURSOR_X 85}200 Coins     
+Ekans{CURSOR_X 85}700 Coins     
+Dratini{CURSOR_X 74}2,100 Coins       
+Sandshrew{CURSOR_X 85}700 Coins
+You don’t have three Coins.\nYou cannot play right now.
+You have 50,000 Coins now.\nYou cannot hold any more.
+You have no Coins.\nYou cannot play now.

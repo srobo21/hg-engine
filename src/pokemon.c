@@ -881,6 +881,9 @@ void LONG_CALL UpdatePassiveForms(struct PartyPokemon *pp)
     case SPECIES_TATSUGIRI:
         form = gf_rand() % 3; // equal chance for all forms
         break;
+    case SPECIES_SQUAWKABILLY:
+        form = gf_rand() % 4; // one of four random colors
+        break;
 #endif
     default:
         shouldUpdate = FALSE;
